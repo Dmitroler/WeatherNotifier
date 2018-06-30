@@ -1,0 +1,18 @@
+<resources>
+    <!--
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    Package name:
+    8E:5B:38:01:69:72:3E:A4:A3:EA:B4:55:8E:6B:35:E5:38:AF:E4:59
+
+    SHA-1 certificate fingerprint:
+    8E:5B:38:01:69:72:3E:A4:A3:EA:B4:55:8E:6B:35:E5:38:AF:E4:59
+
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once the key exist (it starts with "AIza")
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyBr31nd6HzEiRGMGCNedHgOFxkyt9M5yaQ
+    </string>
+</resources>

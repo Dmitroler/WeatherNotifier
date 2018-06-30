@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2E3E96</color>
+    <color name="colorPrimaryDark">#1D2951</color>
+    <color name="linesColor">#ffffff</color> //#2E3E96
+    <color name="smallLinesColor">#D5D4D6</color> //#D5D4D6
+    <color name="textColor">#ffffff</color> //#233040
+    <color name="settingsbackColor">#00000000 </color>
+    <color name="titlesColor">#ffffff</color> //#233040
+    <color name="colorAccent">#ff4081</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="bt_back">#1f98ab</color>
+    <color name="transparent">#00000000</color>
+    <color name="progressBarBackColor">#7bf1f1f1</color>
+    <color name="progressBarFrontColor">#ffffff</color>
+    <color name="cllasicorange">#f68a66</color>
+
+
+</resources>

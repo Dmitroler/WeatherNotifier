@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background_location_list">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="26dp">
+
+        <LinearLayout
+            android:layout_marginTop="482dp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:background="@drawable/sunscreen_button_background"
+            android:backgroundTint="#1AFFFFFF">
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="335dp"
+                android:layout_gravity="center|right"
+                android:src="@drawable/sunscreen_button"
+                app:backgroundTint="@color/cllasicorange"
+                app:fabSize="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:background="@drawable/monitor_pannel_upper_background"
+            android:backgroundTint="#1AFFFFFF">
+            <ImageView
+                android:id="@+id/connection_image_view"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="22dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@mipmap/connection_icon" />
+
+            <ImageView
+                android:id="@+id/battery_image_view"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="295dp"
+                android:src="@mipmap/battery_no_icon" />
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/monitor_panel_layout"
+            android:layout_width="415dp"
+            android:layout_height="415dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/monitor_panel_text"
+            >
+
+
+            <RelativeLayout
+                android:id="@+id/big_progress_bar_relative_layout"
+                android:layout_width="220sp"
+                android:layout_height="220sp"
+                android:layout_centerInParent="true">
+
+                <ProgressBar
+                    android:id="@+id/uv_progress_done_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="220dp"
+                    android:layout_height="180dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/circle_shape"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/circular_progress_bar" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/UV_percent_done_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5sp"
+                        android:text="0%"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/UV_time_left_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="00:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/hi_progress_bar_relative_layout"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_alignStart="@+id/monitor_button"
+            android:layout_below="@+id/monitor_panel_layout">
+
+            <ProgressBar
+                android:id="@+id/hi_index_percent_done_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/circle_shape"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/circular_progress_bar" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/monitor_waterintake_icon_image"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/monitor_waterintake_icon" />
+
+                <TextView
+                    android:id="@+id/water_intake_index_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="00:00"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/humidity_progress_bar_relative_layout"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="118dp"
+            android:layout_marginTop="22dp">
+
+            <ProgressBar
+                android:id="@+id/humidity_index_percent_done_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/circle_shape"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/circular_progress_bar" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/monitor_humidity_icon_image"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/monitor_humidity_icon" />
+
+                <TextView
+                    android:id="@+id/humidity_valuetext_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="-"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/temperature_progress_bar_relative_layout"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="242dp"
+
+            >
+
+            <ProgressBar
+                android:id="@+id/temperature_index_percent_done_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/circle_shape"
+                android:indeterminate="false"
+                android:max="55"
+                android:progress="0"
+                android:progressDrawable="@drawable/circular_progress_bar" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/monitor_temperature_icon_image"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/monitor_temperature_icon" />
+
+                <TextView
+                    android:id="@+id/temperature_valuetext_view"
+                    android:layout_gravity="center_horizontal"
+                    android:text="-"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/uvindex_progress_bar_relative_layout"
+            android:layout_width="89dp"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="255dp"
+            android:layout_marginEnd="63dp"
+            >
+
+            <ProgressBar
+                android:id="@+id/uvindex_percent_done_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/circle_shape"
+                android:indeterminate="false"
+                android:max="12"
+                android:progress="0"
+                android:progressDrawable="@drawable/circular_progress_bar" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/monitor_uv_icon_image"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/monitor_uv_icon" />
+
+                <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:text="-"
+                    android:id="@+id/uv_index_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+
+        <Button
+            android:id="@+id/monitor_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginStart="20sp"
+            android:background="@drawable/button_drawable"
+            android:text="Monitor"
+            android:textSize="17dp"
+            android:textAllCaps="false"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,462 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.finalProject.dmitroLer.weathernotifier.MainFragment">
+
+
+        <LinearLayout
+            android:id="@+id/LocationLinear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/background_fragment_main">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingLeft="3dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/location_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:text="@string/locating"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="28sp" />
+
+                <TextClock
+                    android:id="@+id/textClock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/IconLinear"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingLeft="2dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/TimeLinear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/LocationLinear">
+
+                    <TextView
+                        android:id="@+id/temperature_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textColor="@color/colorWhite"
+                        android:textSize="70sp" />
+
+                    <ImageView
+                        android:id="@+id/current_icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/icon_weather_clear_day" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/screenLine1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="48dp"
+                android:alpha="0.5"
+                app:srcCompat="@color/wallet_bright_foreground_holo_dark" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/misc_data_bubble"
+                android:backgroundTint="#1AFFFFFF"
+                android:layout_weight="1">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imageView11"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:alpha="0.7"
+                        app:srcCompat="@drawable/main_uv_icon2" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/app"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.7"
+                            android:text="@string/uv_index"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/apparent_temperature_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/colorWhite" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="65dp"
+                        android:alpha="0.7"
+                        app:srcCompat="@drawable/icon_data_humidity" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/Humidity_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.7"
+                            android:text="@string/humidity"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/Humidity_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/colorWhite" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:alpha="0.7"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        app:srcCompat="@drawable/icon_data_wind" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/wind_speed_text"
+                            android:alpha="0.7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wind_speed"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/wind_speed_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/colorWhite" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:alpha="0.7"
+                        android:layout_marginLeft="65dp"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        app:srcCompat="@drawable/icon_data_preciptation" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/precip_probability_text"
+                            android:alpha="0.7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/precipitation_probability"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/precip_probability_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/colorWhite" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <ImageView
+                android:id="@+id/screenLine2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:alpha="0.5"
+                app:srcCompat="@color/wallet_bright_foreground_holo_dark" />
+
+            <LinearLayout
+                android:id="@+id/forecast_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/misc_forecast_bubble"
+                android:backgroundTint="#1AFFFFFF"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_weight="1.2">
+
+                <LinearLayout
+                    android:layout_width="65dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/FCTime1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/colorWhite" />
+
+                    <ImageView
+                        android:id="@+id/FCicon1"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/icon_weather_storm_night" />
+
+                    <TextView
+                        android:id="@+id/FCTemp1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/FCline1"
+                    android:layout_width="1dp"
+                    android:layout_height="100dp"
+                    android:alpha="0.5"
+                    app:srcCompat="@color/wallet_bright_foreground_holo_dark" />
+
+                <LinearLayout
+                    android:layout_width="65dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/FCTime2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/colorWhite" />
+
+                    <ImageView
+                        android:id="@+id/FCicon2"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/icon_weather_cloudy_night" />
+
+                    <TextView
+                        android:id="@+id/FCTemp2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/colorWhite" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/FCline2"
+                    android:layout_width="1dp"
+                    android:layout_height="100dp"
+                    android:alpha="0.5"
+                    app:srcCompat="@color/wallet_bright_foreground_holo_dark" />
+
+                <LinearLayout
+                    android:layout_width="65dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/FCTime3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/colorWhite" />
+
+                    <ImageView
+                        android:id="@+id/FCicon3"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/icon_weather_cloudy_night" />
+
+                    <TextView
+                        android:id="@+id/FCTemp3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/colorWhite" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/FCline3"
+                    android:layout_width="1dp"
+                    android:layout_height="100dp"
+                    android:alpha="0.5"
+                    app:srcCompat="@color/wallet_bright_foreground_holo_dark" />
+
+                <LinearLayout
+                    android:layout_width="65dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/FCTime4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/colorWhite" />
+
+                    <ImageView
+                        android:id="@+id/FCicon4"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/icon_weather_cloudy_night" />
+
+                    <TextView
+                        android:id="@+id/FCTemp4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/colorWhite" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/FCline4"
+                    android:layout_width="1dp"
+                    android:layout_height="100dp"
+                    android:alpha="0.5"
+                    app:srcCompat="@color/wallet_bright_foreground_holo_dark" />
+
+                <LinearLayout
+                    android:layout_width="65dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/FCTime5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/colorWhite" />
+
+                    <ImageView
+                        android:id="@+id/FCicon5"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/icon_weather_clear_night" />
+
+                    <TextView
+                        android:id="@+id/FCTemp5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/colorWhite" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:paddingBottom="3dp"
+                    android:paddingTop="4dp"
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:alpha="0.6"
+                    app:srcCompat="@drawable/darkskylogo1"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+</FrameLayout>

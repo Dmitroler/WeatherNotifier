@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.finalProject.dmitroLer.weathernotifier.MainActivity">
+
+    <item
+        android:id="@+id/bluetooth"
+        android:title="UV Monitor"
+        />
+    <item
+        android:id="@+id/set_alarm_time"
+        android:title="@string/set_alarm_time" />
+    <item
+        android:id="@+id/define_location"
+        android:title="@string/define_locations" />
+    <item
+        android:id="@+id/settings"
+        android:title="@string/settings" />
+
+    <!--
+    <item
+        android:id="@+id/alarm_demo"
+        android:title="@string/alarm_demo" />
+
+    <item
+        android:id="@+id/update_demo"
+        android:title="@string/update_demo"/>
+-->
+</menu>
